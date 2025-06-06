@@ -37,6 +37,12 @@ or the packages can be installed manually as given below:
   - shiny
   - glmnet
   - data.table
+
+    **Install Bioconductor packages**
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(c("sva", "preprocessCore"))
+
   - (can be installed using `install.packages()`)
 
 - **Trained Models**: The app requires pre-trained logistic regression models saved as `.rds` files. The models for mUC and mRCC are included in this project inside models folder.
