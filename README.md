@@ -46,6 +46,6 @@ or the packages can be installed manually as given below:
 Clone the repository:
 
 ```bash
-git clone https://github.com/rajatbutola/ML_ShinyApp_R.git
+git clone https://github.com/rajatbutola/ImmunoResponsePredictor.git
 
  
