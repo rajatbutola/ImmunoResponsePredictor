@@ -34,17 +34,20 @@
 or the packages can be installed manually as given below:
 - **R**: Version 4.0.0 or higher.
 - **Libraries**: The following libraries are required:
-  - shiny
-  - glmnet
-  - data.table
+  ```r
+  install.packages(c(
+  "shiny",
+  "glmnet",
+  "data.table"
+  ))
 
-    **Install Bioconductor packages**
-      ```r
+ **Install Bioconductor packages**
+  ```r
       if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
       BiocManager::install(c("sva", "preprocessCore"))
-
-  - (can be installed using `install.packages()`)
+```
+- (can be installed using `install.packages()`)
 
 - **Trained Models**: The app requires pre-trained logistic regression models saved as `.rds` files. The models for mUC and mRCC are included in this project inside models folder.
 
