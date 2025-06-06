@@ -39,9 +39,10 @@ or the packages can be installed manually as given below:
   - data.table
 
     **Install Bioconductor packages**
-if (!requireNamespace("BiocManager", quietly = TRUE))
+      ```r
+      if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install(c("sva", "preprocessCore"))
+      BiocManager::install(c("sva", "preprocessCore"))
 
   - (can be installed using `install.packages()`)
 
