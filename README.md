@@ -21,8 +21,6 @@
 
 ## Requirements
 
-## Requirements
-
 - **R Packages**:  
   This project uses [renv](https://rstudio.github.io/renv/) to manage all required packages and their versions.  
   The recommended way to install all dependencies is to run in your R console (from the project directory):
@@ -59,65 +57,50 @@ or the packages can be installed manually as given below:
 
 ---
 
-## 📌 Features
-
-- Upload gene expression `.csv` files
-- Choose between pre-trained mUC and mRCC models
-- Generate and download immunotherapy response predictions
-- Real-time feedback on upload and prediction status
-
 ---
 
-## 🧰 Prerequisites
+
+
+**Detailed Steps to run this code**
+- Running the ImmunoResonsePredictor on local system. 
+- To download and run the Shiny app from the repository at https://github.com/rajatbutola/ImmunoResponsePredictor on your local system, follow these step-by-step instructions.
+
+## Prerequisites
 
 Before starting, ensure the following tools are installed:
 
 - [**R**](https://cran.r-project.org/): Version **4.3.3** or higher  
 - [**RStudio**](https://posit.co/download/rstudio-desktop/): Recommended IDE for running Shiny apps
 
----
+## Step 1: Clone the Repository 
+- First download the source code of ImmunoResponcePredictor from Github to your local system. Open your terminal or command prompt and navigate to your project directory:
 
-## 📥 Step 1: Clone the Repository
-
-Open your terminal or command prompt and navigate to your project directory:
-
-```bash
+  ```r
 cd /path/to/your/projects
 
 
-**Detailed Steps to run this code**
-- Running the ImmunoResonsePredictor on local system. 
+- Run the following command to clone the repository from GitHub:
 
-- To download and run the Shiny app from the repository at https://github.com/rajatbutola/ImmunoResponsePredictor on your local system, follow these step-by-step instructions.
-
-Prerequisites
-Before starting, ensure you have:
-
-R: Version 4.3.3 or higher (based on your package list, which includes base 4.3.3).
-RStudio: Recommended for running Shiny apps (download from rstudio.com).
-
-Step 1. First download the source code of ImmunoResponcePredictor from Github to your local system. For that open the command line interface and navigate to the directory you wanted GUI to save.
-
-Example: cd /path/to/your/projects
-
-Run the following command to clone the repository from GitHub:
-
+  ```r
 git clone https://github.com/rajatbutola/ImmunoResponsePredictor.git
 
-After this you will successfully download the code into a folder named ImmunoResponsePredictor containing the repository files.
+- After this you will successfully download the code into a folder named ImmunoResponsePredictor containing the repository files.
 
-Requirements
-Step 2. Install Required R Packages:
+## Requirements
 
-R Packages:
-This project uses renv to manage all required packages and their versions.
-The recommended way to install all dependencies is to run in your R console (from the project directory):
+## Step 2. Install Required R Packages:
 
+### R Packages:
+- This project uses renv to manage all required packages and their versions.
+- The recommended way to install all dependencies is to run in your R console (from the project directory):
+
+  ```r
 install.packages("renv")
 renv::restore()
 
-or the packages can be installed manually as given below:
+- or the packages can be installed manually as given below:
 
+  ```r
 Libraries: The following libraries are required:
 install.packages(c(
 "shiny",
@@ -125,20 +108,22 @@ install.packages(c(
 "data.table"
 ))
 
-Install Bioconductor packages
-
+- Install Bioconductor packages
+  ```r
     if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
     BiocManager::install(c("sva", "preprocessCore"))
 
-A user just needs to run in their R console:
+- A user just needs to run in their R console:
 
+  ```r
 source("install.R")
 
 
-Step 3. After installing the packages please check the Shiny App Structure:
+## Step 3: Confirm Directory Structure 
+- After installing the packages please check the Shiny App Structure:
 
-The folder should be arranged as below:
+- The folder should be arranged as below:
 
 app.R
 renv.lock
@@ -147,6 +132,15 @@ Dockerfile
 models\
     logistic-Model-train-muc-test-muc.rds
     logistic-Model-train-rcc-test-rcc.rds
+
+ImmunoResponsePredictor/
+├── app.R
+├── renv.lock
+├── README.md
+├── Dockerfile
+├── models/
+│   ├── logistic-Model-train-muc-test-muc.rds
+│   └── logistic-Model-train-rcc-test-rcc.rds
     
 Apart from this you will also need train and test datasets (count matrix) which are not provided here with this Github repository due to copyright and sensitivity issues. The data can be provided upon request. 
 
