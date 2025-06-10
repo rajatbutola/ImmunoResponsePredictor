@@ -131,13 +131,13 @@ models\
     logistic-Model-train-rcc-test-rcc.rds
 
 ImmunoResponsePredictor/
-- ├── app.R
-- ├── renv.lock
-- ├── README.md
-- ├── Dockerfile
-- ├── models/
-- │   ├── logistic-Model-train-muc-test-muc.rds
-- │   └── logistic-Model-train-rcc-test-rcc.rds
+ ├── app.R
+ ├── renv.lock
+ ├── README.md
+ ├── Dockerfile
+ ├── models/
+ │   ├── logistic-Model-train-muc-test-muc.rds
+ │   └── logistic-Model-train-rcc-test-rcc.rds
     
 Apart from this you will also need train and test datasets (count matrix) which are not provided here with this Github repository due to copyright and sensitivity issues. The data can be provided upon request. 
 
