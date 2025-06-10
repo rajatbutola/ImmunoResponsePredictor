@@ -58,7 +58,7 @@ or the packages can be installed manually as given below:
 
 
 
-# Detailed Steps to run this code
+# Detailed steps to run this code
 - Running the ImmunoResonsePredictor on local system. 
 - To download and run the Shiny app from the repository at https://github.com/rajatbutola/ImmunoResponsePredictor on your local system, follow these step-by-step instructions.
 
