@@ -58,7 +58,7 @@ or the packages can be installed manually as given below:
 
 
 
-**Detailed Steps to run this code**
+# Detailed Steps to run this code
 - Running the ImmunoResonsePredictor on local system. 
 - To download and run the Shiny app from the repository at https://github.com/rajatbutola/ImmunoResponsePredictor on your local system, follow these step-by-step instructions.
 
@@ -122,13 +122,6 @@ Before starting, ensure the following tools are installed:
 
 - The folder should be arranged as below:
 
-app.R
-renv.lock
-README.md
-Dockerfile
-models\
-    logistic-Model-train-muc-test-muc.rds
-    logistic-Model-train-rcc-test-rcc.rds
 
 ImmunoResponsePredictor/
 
@@ -148,9 +141,9 @@ ImmunoResponsePredictor/
 
 
     
-Apart from this you will also need train and test datasets (count matrix) which are not provided here with this Github repository due to copyright and sensitivity issues. The data can be provided upon request. 
+- Apart from this you will also need train and test datasets (count matrix) which are not provided here with this Github repository due to copyright and sensitivity issues. The data can be provided upon request. 
 
-Step 4. Run the Shiny App Locally
+## Step 4. Run the Shiny App Locally
 
 A.	Open the main app file:
 In RStudio, open app.R.
@@ -158,17 +151,19 @@ In RStudio, open app.R.
 B.	Run the app:
 Click the “Run App” button in RStudio (top-right of the script editor).
 Or, in the R console, run:
-shiny::runApp()
+  ```r
+  shiny::runApp()
+```
 
 (Ensure the working directory is set to the ImmunoResponsePredictor folder.)
 
 Step 5. Access the app:
-•	The Shiny app should open in a browser window.
-•	To interact with the app to verify it works use a “Browse” button for uploading .csv files containing gene expression data, 
-•	a status indicator will confirm that the “Upload complete”, 
-•	then on a dropdown menu select the appropriate pre-trained LogitDA model (mUC or mRCC), and click “Make predictions” button to initiate response prediction on the uploaded data, and 
-•	at last, click on “Download predictions” button to export the results in .csv format. 
-•	In addition, the interface provides real-time feedback, including the number of rows in the output predictions and confirmation messages upon successful prediction generation.
+-	The Shiny app should open in a browser window.
+-	To interact with the app to verify it works use a “Browse” button for uploading .csv files containing gene expression data, 
+-	a status indicator will confirm that the “Upload complete”, 
+-	then on a dropdown menu select the appropriate pre-trained LogitDA model (mUC or mRCC), and click “Make predictions” button to initiate response prediction on the uploaded data, and 
+-	at last, click on “Download predictions” button to export the results in .csv format. 
+-	In addition, the interface provides real-time feedback, including the number of rows in the output predictions and confirmation messages upon successful prediction generation.
 
 
 
