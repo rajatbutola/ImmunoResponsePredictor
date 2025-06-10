@@ -51,9 +51,6 @@ or the packages can be installed manually as given below:
 
 - **Trained Models**: The app requires pre-trained logistic regression models saved as `.rds` files. The models for mUC and mRCC are included in this project inside models folder.
 
-## 
-
-**ImmunoResponsePredictor** is an interactive Shiny-based application designed to predict immunotherapy response using pre-trained logistic models on gene expression data.
 
 ---
 
@@ -76,13 +73,13 @@ Before starting, ensure the following tools are installed:
 - First download the source code of ImmunoResponcePredictor from Github to your local system. Open your terminal or command prompt and navigate to your project directory:
 
   ```r
-cd /path/to/your/projects
+  cd /path/to/your/projects
 
 
 - Run the following command to clone the repository from GitHub:
 
   ```r
-git clone https://github.com/rajatbutola/ImmunoResponsePredictor.git
+  git clone https://github.com/rajatbutola/ImmunoResponsePredictor.git
 
 - After this you will successfully download the code into a folder named ImmunoResponsePredictor containing the repository files.
 
@@ -95,18 +92,18 @@ git clone https://github.com/rajatbutola/ImmunoResponsePredictor.git
 - The recommended way to install all dependencies is to run in your R console (from the project directory):
 
   ```r
-install.packages("renv")
-renv::restore()
+  install.packages("renv")
+  renv::restore()
 
 - or the packages can be installed manually as given below:
 
   ```r
-Libraries: The following libraries are required:
-install.packages(c(
-"shiny",
-"glmnet",
-"data.table"
-))
+  Libraries: The following libraries are required:
+  install.packages(c(
+  "shiny",
+  "glmnet",
+  "data.table"
+  ))
 
 - Install Bioconductor packages
   ```r
@@ -117,7 +114,7 @@ install.packages(c(
 - A user just needs to run in their R console:
 
   ```r
-source("install.R")
+  source("install.R")
 
 
 ## Step 3: Confirm Directory Structure 
