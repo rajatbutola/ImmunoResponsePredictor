@@ -119,9 +119,9 @@ server <- function(input, output, session) {
             stop("mUC model expects 49 features, but test data has ", length(test_cols), " features.")
           }
           
-          train_zip_path <- file.path("data/mUC_log2TPMp1_train.zip")
+          train_zip_path <- file.path("data/mUC_train.zip")
           if (!file.exists(train_zip_path)) stop("Training zip file not found: ", train_zip_path)
-          train_data_raw_mUC <- loadTable(file = unz(train_zip_path, "log2TPMp1_train.csv"), 
+          train_data_raw_mUC <- loadTable(file = unz(train_zip_path, "mUC_train.csv"), 
                                           transpose = FALSE, convertToMatrix = TRUE, sep = ",", header = TRUE)
           if (!is.matrix(train_data_raw_mUC)) {
             stop("mUC training data is not a matrix")
@@ -170,9 +170,9 @@ server <- function(input, output, session) {
             stop("RCC model expects 27 features, but test data has ", length(test_cols), " features.")
           }
           
-          train_zip_path <- file.path("data/RCC_log2TPMp1_train.zip")
+          train_zip_path <- file.path("data/RCC_train.zip")
           if (!file.exists(train_zip_path)) stop("Training zip file not found: ", train_zip_path)
-          train_data_raw_mRCC <- loadTable(file = unz(train_zip_path, "log2TPMp1_train.csv"), 
+          train_data_raw_mRCC <- loadTable(file = unz(train_zip_path, "RCC_train.csv"), 
                                            transpose = FALSE, convertToMatrix = TRUE, sep = ",", header = TRUE)
           if (!is.matrix(train_data_raw_mRCC)) {
             stop("RCC training data is not a matrix")
@@ -299,7 +299,7 @@ server <- function(input, output, session) {
 
         
         predictions(results_df)
-        output$downloadUI <- renderUI({ downloadButton("downloadPredictions", "Download predictions") })
+        output$downloadUI <- renderUI({ downloadButton("downloadPredictions", "Make predictions") })
         output$status <- renderText(sprintf("Predictions generated successfully! %% supporting by CosineDist_prior: %.2f%%", orr_results$prior_final_percentage))
       })
     }, error = function(e) {
