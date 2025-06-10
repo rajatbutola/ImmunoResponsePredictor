@@ -131,18 +131,13 @@ models\
     logistic-Model-train-rcc-test-rcc.rds
 
 ImmunoResponsePredictor/
+
  ├── app.R
- 
  ├── renv.lock
- 
  ├── README.md
- 
  ├── Dockerfile
- 
  ├── models/
- 
  │   ├── logistic-Model-train-muc-test-muc.rds
- 
  │   └── logistic-Model-train-rcc-test-rcc.rds
  
     
