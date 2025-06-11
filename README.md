@@ -61,7 +61,7 @@ or the packages can be installed manually as given below:
     https://logitda.shinyapps.io/immunoresponsepredictor/
 
 ---
-# To run locally please follow the below steps:
+# Running the ImmunoResponsePredictor locally:
 
 ## Detailed steps to run this code locally
 - Running the ImmunoResonsePredictor on local system. 
