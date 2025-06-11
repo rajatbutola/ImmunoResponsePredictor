@@ -2,7 +2,7 @@
 
 **ImmunoResonsePredictor** is an interactive R-based Shiny web application that allows users to generate predictions using pre-trained predictors on uploaded test data. The app supports logistic regression models for two different types of cancer: mUC (metastasis urothelial carcinoma) and mRCC (metastasis renal cell carcinoma). Users can upload a test dataset, select a model, and generate predictions, which can then be downloaded as a CSV file for further analysis.
 
-![image](https://github.com/user-attachments/assets/3c6a115c-b703-48e4-a0d8-50cefd5ff24a)
+                          ![image](https://github.com/user-attachments/assets/3c6a115c-b703-48e4-a0d8-50cefd5ff24a)
 
 
 ## Features
