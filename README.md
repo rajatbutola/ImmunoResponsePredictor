@@ -56,15 +56,14 @@ or the packages can be installed manually as given below:
 
 
 ---
-The GUI can either be downloaded directly from this repository or can be accessed online with the following link:
+# The GUI can either be downloaded directly from this repository or accessed online with the following link:
 
     https://logitda.shinyapps.io/immunoresponsepredictor/
 
 ---
+# For running locally please follow the below steps:
 
-
-
-# Detailed steps to run this code
+## Detailed steps to run this code locally
 - Running the ImmunoResonsePredictor on local system. 
 - To download and run the Shiny app from the repository at https://github.com/rajatbutola/ImmunoResponsePredictor on your local system, follow these step-by-step instructions.
 
