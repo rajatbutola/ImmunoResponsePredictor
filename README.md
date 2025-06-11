@@ -56,12 +56,12 @@ or the packages can be installed manually as given below:
 
 
 ---
-# The GUI can either be downloaded directly from this repository or accessed online with the following link:
+# The GUI can either be downloaded directly from this repository or accessed online via following link:
 
     https://logitda.shinyapps.io/immunoresponsepredictor/
 
 ---
-# For running locally please follow the below steps:
+# To run locally please follow the below steps:
 
 ## Detailed steps to run this code locally
 - Running the ImmunoResonsePredictor on local system. 
@@ -171,7 +171,28 @@ Step 5. Access the app:
 -	In addition, the interface provides real-time feedback, including the number of rows in the output predictions and confirmation messages upon successful prediction generation.
 
 
+# Running the ImmunoResponsePredictor Online:
+You can use the GUI directly in your browser without downloading or installing anything locally. Simply visit the following link:
 
+    https://logitda.shinyapps.io/immunoresponsepredictor/
+
+## Important Note for mRCC Model Users
+The mRCC model requires intensive preprocessing using "ComBat + Quantile" normalization due to batch effect correction and distribution alignment. These steps are computationally heavy and memory-intensive, making it difficult to run them directly on the hosting server due to RAM limitations.
+
+To address this, we recommend users preprocess their test data locally using the provided preprocess.R script included in the repository.
+
+### Please preprocess your test gene expression matrix using ComBat + Quantile normalization before uploading it to the web app.
+
+## Instructions for Using the Online App
+- Upload your preprocessed ```Test.csv``` file.
+
+- Select the desired pre-trained model (```mUC``` or ```mRCC```) from the dropdown.
+
+- Click the “Make predictions” button to initiate processing.
+
+- Download the resulting predictions as a ```.csv``` file.
+
+The app will provide real-time feedback during each step, confirming successful uploads and prediction generation.              
 
 
 Clone the repository:
