@@ -60,5 +60,5 @@ n_train <- nrow(expr_train_t)
 qn_test <- qn_expr_t[(n_train + 1):nrow(qn_expr_t), ]
 
 # Save normalized test set
-write.csv(qn_test, file = "test.csv", row.names = TRUE)  # Now this file file ready for uploading into the GUI on server. 
+write.csv(qn_test, file = "test.csv", row.names = TRUE)  # Now this file is ready for uploading into the GUI on server. 
 cat("Preprocessed test data saved to test.csv\n")
