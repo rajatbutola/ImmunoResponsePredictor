@@ -7,13 +7,36 @@
 
 ## Features
 
-- **Upload Test Data**: Upload a CSV file containing the test dataset.
-- **Select Trained Model**: Choose from two pre-trained LogitDA models:
+- **Upload Test Data**: Upload a CSV file containing gene-expression matrix.
+- **File Structure**: The rows of the file represent individual samples, while the columns correspond to gene expression data.
+- **Gene IDs**: You can use one of the following gene identifiers in the columns:
+
+   - Gene Symbols (e.g., TP53)
+   - Entrez Gene IDs (e.g., 7157)
+   - Ensembl Gene IDs (e.g., ENSG00000141510)
+   - Ensembl Transcript IDs (e.g., ENST00000269305)
+
+- **Gene Panel**: For **mUC model**, the file must include **49 specific signature genes**; for **mRCC model**, the file must have **27 signature genes**.
+- **Select a Pre-Trained Model**: Choose from two pre-trained LogitDA models:
   - mUC Model
   - mRCC Model
-- **Generate Predictions**: Click a button to process the data and generate predictions.
-- **Download Predictions**: After generating the predictions, users can download the results as a CSV file.
+- **Generate Predictions**: After uploading your file and selecting the model, click on the ‘Generate predictions’ button to process the data.
+- The system will:
+  - Match your uploaded gene expression data with the required signature genes for the selected model.
+  - Handle missing genes by either imputing data from training means or replacing with zeros.
+  - Normalize gene IDs to ensure consistency across the dataset.
+  - Run predictions using the LogitDA algorithm to classify each sample as Responsive (R) or Non-Responsive (NR).
+- **Applicability Metric**:
+  - Alongside predictions, the system computes an **applicability score** for each sample, based on cosine-distance similarity between your dataset and the model’s trained R/NR profiles.
+  - This metric gives you an interpretability score that indicates how closely your samples align with the biological structure learned by the model.
+  - The higher the applicability score, the better the model's predictions align with the expected biological pattern.
+- **Download Predictions**: Once predictions are made, you can download the results as a CSV file containing:
+  - Sample ID
+  - Cosine Distances from Rs and NRs groups
+  - Predicted Response (R or NR)
+  - Applicability Score (cosine distance)
 - **Model Validation**: Ensures that the test dataset has the required features (genes) for the selected model and notifies the user if there are any discrepancies.
+
 
 ## How It Works
 
